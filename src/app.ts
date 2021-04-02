@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 const app = express();
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 mongoose.connect(
   process.env.MONGODB_URL as string,
@@ -20,6 +20,6 @@ mongoose.connect(
 );
 
 app.use("/", router);
-app.listen(8080, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log("Server is rocking at 8080");
 });
