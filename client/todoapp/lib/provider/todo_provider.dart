@@ -29,5 +29,19 @@ class TodoProvider extends ChangeNotifier {
     return response.body;
   }
 
+  //Delete request
+  Future deleteData() async {
+
+    final Uri restAPIURL =
+        Uri.parse("https://todoflutternodejs.herokuapp.com/delete");
+
+    http.Response response = await httpClient.delete(restAPIURL,headers: customHeaders,
+      body: {
+        
+      }
+    );
+
+  }
+
   
 }

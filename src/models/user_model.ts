@@ -9,7 +9,16 @@ interface TodoDocument extends mongoose.Document {
   title: string;
   description: string;
 }
+// //Delete request
+// Future deleteData(String id) async {
+//   final Uri restAPIURL =
+//       Uri.parse("https://todoflutternodejs.herokuapp.com/delete");
 
+//   http.Response response = await httpClient.delete(restAPIURL,
+//       headers: customHeaders, body: jsonEncode(id));
+
+//   return response.body;
+// }
 const todoSchema = new mongoose.Schema({
   title: {
     type: String,
