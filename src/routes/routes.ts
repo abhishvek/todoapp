@@ -52,10 +52,11 @@ router.delete("/delete", async (req: Request, res: Response) => {
 //Update request
 router.put("/update", async (req: Request, res: Response) => {
   const filter = {
-    title: req.body.title,
+    id: req.body.id,
   };
 
   const updatedData = {
+    title: req.body.title,
     description: req.body.description,
   };
 
