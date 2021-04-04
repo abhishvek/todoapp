@@ -35,7 +35,7 @@ router.get("/", async (req: Request, res: Response) => {
 
 router.delete("/delete", async (req: Request, res: Response) => {
   const filter = {
-    id: req.body.id,
+    title: req.body.title,
   };
 
   const dataItem = await Todo.deleteOne(filter)
